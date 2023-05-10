@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+	 transition: 0.5s;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-kerning: auto;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+  background: url('bg-desktop.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: hsl(229, 57%, 11%);
+}
+
+/* section contains #left-box and #right-box*/
+
+section {
+  display: flex;
+  column-gap: 20px;
+  align-items: flex-end;
+}
+
+/*left-box contains logo and icons below*/
+
+#left-box {
+  background-color: hsl(228, 56%, 26%);
+  width: 300px;
+  height: 200px;
+  padding: 40px 30px 30px 30px;
+  border-radius: 10px 100px 10px 10px;
+}
+
+#logo {
+  background: url('fylo-logo.svg');
+  background-size: fit;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 50px;
+  /*border: 1px solid green;*/
+  margin-bottom: 30px;
+}
+
+#icons {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 80px;
+}
+
+#document {
+  background: url('icon-document.svg');
+  background-size: fit;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  padding: 20px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 5px;
+}
+
+#folder {
+  background: url('icon-folder.svg');
+  background-size: fit;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  padding: 20px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 5px;
+}
+
+#upload {
+  background: url('icon-upload.svg');
+  background-size: fit;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  padding: 20px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 5px;
+}
+
+/*#right-box contains the texts and progress bar as well as the relative white element above it at the right*/
+
+#right-box {
+  background-color: hsl(228, 56%, 26%);
+  width: 500px;
+  height: 150px;
+  padding: 20px 40px 20px 40px;
+  border-radius: 10px;
+}
+
+/*#loader-outline is the dark part of the progress bar which contains the pink element within*/
+#loader-outline {
+  width: 100%;
+  height: 20px;
+  background-color: hsl(229, 57%, 11%);
+  padding: 2px;
+  border-radius: 10px;
+}
+
+/*#loader-progress is the pink portion of the progress bar*/
+#loader-progress {
+  display: flex;
+  width: 75%;
+  height: 100%;
+  background:linear-gradient(
+  45deg,
+  hsl(6, 100%, 80%),
+  hsl(335, 100%, 65%)
+  );
+  padding: 2px;
+  border-radius: 10px;
+  justify-content: flex-end;
+  transition: width 2s ease-in-out;
+}
+
+#loader-outline:hover #loader-progress {
+  width: 5%;
+}
+
+/*this is the white dot in the progress bar*/
+#white-dot {
+  height: 100%;
+  width: 12px;
+  border-radius: 50%;
+  background-color: hsl(243, 100%, 93%);
+}
+
+/*this the p element with text 'you've have used....*/
+#first-para {
+  color: white;
+}
+
+/*this is the bold text in the #first-para (815 GB)*/
+#first-para span {
+  font-weight: 700;
+}
+
+/*#gp-left is the white box that houses the bold text '185GB left'*/
+#gb-left {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 15px;
+  width: 150px;
+  height: 100px;
+  margin-bottom: -100px;
+  background-color: hsl(243, 100%, 93%);
+  border-radius: 10px;
+  top: -110px;
+  right: -280px;
+  clip-path: polygon(0 0, 100% 0, 99% 93%, 87% 61%, 0 61%);
+}
+
+/*all text in the white box*/
+#gb-left p {
+  color: hsl(229, 57%, 11%);
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0;
+}
+
+/*the text 'GB Left' in the white box */
+#gb-left span {
+  color: hsl(229, 7%, 55%);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+/*the div below the progress bar that houses '0GB 1000GB' text*/
+#below-loader {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*the p elements below the progress bar*/
+#below-loader p {
+  color: hsl(243, 100%, 93%);
+  font-weight: 700;
+}
+
+/*footer text*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 50px;
+  }
+  
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 850px) {
+  
+  body {
+    background: url('bg-mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: hsl(229, 57%, 11%);
+  }
+
+  
+  section {
+    flex-direction: column;
+  }
+  
+  #left-box {
+    margin-bottom: 20px;
+  }
+  
+  #right-box {
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+  }
+  
+  #first-para {
+    font-size: 14px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  #below-loader p {
+    font-size: 14px;
+  }
+  
+  #gb-left {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 15px;
+    width: 150px;
+    height: 70px;
+    /*margin-bottom: -100px;*/
+    background-color: hsl(243, 100%, 93%);
+    border-radius: 10px;
+    top: 25px;
+    right: -55px;
+    clip-path: none;
+  }
+  
+}
