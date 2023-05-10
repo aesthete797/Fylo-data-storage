@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0/hub)
-- Live Site URL: [Vercel](https://hubble-laanding-page.vercel.app/)
+- Solution URL: [Frontend mentor](https://www.frontendmentor.io/solutions/responsive-fylo-data-storage-component-solution-with-flexbox-pqcLr6OKOC)
+- Live Site URL: [Vercel](https://fylo-data-storage-livid-mu.vercel.app/)
 
 ### Built with
 
